@@ -55,7 +55,7 @@ public class playerController : MonoBehaviour {
 		pontuacao = 0;
 		playerController.contCoin = 0;
 		PlayerPrefs.SetInt ("pontuacao", pontuacao);
-        Time.timeScale = 1;
+        Time.timeScale = 0;
     }
 
 	// Update is called once per frame

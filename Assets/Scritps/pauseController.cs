@@ -7,12 +7,13 @@ public class pauseController : MonoBehaviour {
     //Pause
     public GameObject panelPause;
     public GameObject panelCuriosidades;
+    public GameObject panelHistoria;
     public GameObject buttonPause;
-    public GameObject tempo;
     private float segundos;
     // Use this for initialization
     void Start () {
-        Time.timeScale = 1;
+        Time.timeScale = 0;
+        buttonPause.SetActive(false);
     }
 	
 	// Update is called once per frame
@@ -77,7 +78,12 @@ public class pauseController : MonoBehaviour {
     public void fecharCuriosidade()
     {
         panelCuriosidades.SetActive(false);
-        tempo.SetActive(true);
+        resumeGame();
+    }
+    public void fecharHistoria()
+    {
+        panelHistoria.SetActive(false);
+        buttonPause.SetActive(true);
         resumeGame();
     }
 }
