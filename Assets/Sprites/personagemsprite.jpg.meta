@@ -1,0 +1,294 @@
+fileFormatVersion: 2
+guid: 946ad46379050724d815b9151b5187db
+timeCreated: 1515800629
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: personagemsprite_0
+    21300002: personagemsprite_1
+    21300004: personagemsprite_2
+    21300006: personagemsprite_3
+    21300008: personagemsprite_4
+    21300010: personagemsprite_5
+    21300012: personagemsprite_6
+    21300014: personagemsprite_7
+    21300016: personagemsprite_8
+    21300018: personagemsprite_9
+    21300020: personagemsprite_10
+    21300022: personagemsprite_11
+    21300024: personagemsprite_12
+    21300026: personagemsprite_13
+    21300028: personagemsprite_14
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: personagemsprite_0
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 399
+        width: 51
+        height: 92
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 1}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: personagemsprite_1
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 399
+        width: 62
+        height: 92
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: personagemsprite_2
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 400
+        width: 73
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: personagemsprite_3
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 399
+        width: 52
+        height: 91
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: personagemsprite_4
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 268
+        width: 57
+        height: 94
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 3, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: personagemsprite_5
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 271
+        width: 66
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 1}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: personagemsprite_6
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 275
+        width: 55
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: personagemsprite_7
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 284
+        width: 47
+        height: 94
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: personagemsprite_8
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 163
+        width: 59
+        height: 86
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: personagemsprite_9
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 143
+        width: 63
+        height: 89
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: personagemsprite_10
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 140
+        width: 59
+        height: 92
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: personagemsprite_11
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 132
+        width: 49
+        height: 92
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: personagemsprite_12
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 25
+        width: 102
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: personagemsprite_13
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 27
+        width: 86
+        height: 71
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: personagemsprite_14
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 23
+        width: 45
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 709ac8f706e0e0c4d81aedff3c88670f
+timeCreated: 1516482809
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - barreiraPrefab1: {instanceID: 0}
+  - barreiraPrefab2: {instanceID: 0}
+  - rapido: {instanceID: 0}
+  - moedaPrefab1: {instanceID: 0}
+  - moedaPrefab2: {instanceID: 0}
+  - moedaPrefab3: {instanceID: 0}
+  - moedaPrefab4: {instanceID: 0}
+  - moedaPrefab5: {instanceID: 0}
+  - moedaPrefab6: {instanceID: 0}
+  - pulo: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

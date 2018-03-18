@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 000c8edea1b203a46bb9b0cd98be6474
+timeCreated: 1516555841
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Eldes Cordel 1
+  fontNames:
+  - Eldes Cordel 1
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
