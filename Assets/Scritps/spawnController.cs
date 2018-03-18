@@ -9,7 +9,7 @@ public class spawnController : MonoBehaviour {
 	public GameObject barreiraPrefab1;
 	public GameObject barreiraPrefab2;
 	public static float rateSpawn = 4;
-    public static float rateSpawn2 = 6;
+    public static float rateSpawn2 = 5;
     public float currentTime;
     private int posicao;
     private float y;
