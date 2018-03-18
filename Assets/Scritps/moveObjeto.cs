@@ -18,20 +18,10 @@ public class moveObjeto : MonoBehaviour {
 		//Pontos
 		player = GameObject.Find("Player") as GameObject;
 		currentTime = 0;
-		aux = 10;
-	}
+    }
 
 	// Update is called once per frame
 	void Update () {
-		currentTime = Time.time;
-		if (currentTime >= aux) {
-			aux += 10;
-			velocidade -= 0.015f;
-        } else {
-			
-		}
-
-
 		x = transform.position.x;
 		x +=velocidade * Time.deltaTime;
 
