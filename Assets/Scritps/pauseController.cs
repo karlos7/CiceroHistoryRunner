@@ -27,9 +27,8 @@ public class pauseController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (playerController.contCoin >= 5)
+        if (playerController.contCoin >= 100)
         {
-            playerController.contCoin = 0;
             PlayerPrefs.SetInt("moedas", playerController.contCoin);
             panelCuriosidades.SetActive(true);
             Time.timeScale = 0;
@@ -91,7 +90,12 @@ public class pauseController : MonoBehaviour {
     public void fecharCuriosidade()
     {
         panelCuriosidades.SetActive(false);
-        resumeGame();
+		PlayerPrefs.SetInt ("pontuacao", playerController.pontuacao);
+		PlayerPrefs.SetInt ("moedas", playerController.contCoin);
+		if (playerController.pontuacao > PlayerPrefs.GetInt ("recorde")) {
+			PlayerPrefs.SetInt ("recorde", playerController.pontuacao);
+		}
+		SceneManager.LoadScene("vitoria");
     }
     public void fecharHistoria()
     {
