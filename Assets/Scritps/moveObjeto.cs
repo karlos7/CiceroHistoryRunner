@@ -6,7 +6,6 @@ public class moveObjeto : MonoBehaviour {
 
     public static float velocidade = -2f;
     private float x;
-	private float currentTime;
 	private float aux;
 
 	//Pontos
@@ -17,7 +16,6 @@ public class moveObjeto : MonoBehaviour {
 	void Start () {
 		//Pontos
 		player = GameObject.Find("Player") as GameObject;
-		currentTime = 0;
     }
 
 	// Update is called once per frame

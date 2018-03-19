@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class pauseController : MonoBehaviour {
     //Pause
     public GameObject panelPause;
+	public GameObject pular;
+	public GameObject slide;
     public GameObject panelCuriosidades;
     public GameObject panelHistoria;
     public GameObject panelHistoria2;
@@ -19,6 +21,8 @@ public class pauseController : MonoBehaviour {
     void Start () {
         Time.timeScale = 0;
         buttonPause.SetActive(false);
+		pular.SetActive (false);
+		slide.SetActive (false);
     }
 	
 	// Update is called once per frame
@@ -61,6 +65,8 @@ public class pauseController : MonoBehaviour {
     {
         panelPause.SetActive(true);
         buttonPause.SetActive(false);
+		pular.SetActive (false);
+		slide.SetActive (false);
         Pause();
     }
 
@@ -68,6 +74,8 @@ public class pauseController : MonoBehaviour {
     {
         panelPause.SetActive(false);
         buttonPause.SetActive(true);
+		pular.SetActive (true);
+		slide.SetActive (true);
         despausar();
     }
 
@@ -106,6 +114,8 @@ public class pauseController : MonoBehaviour {
             botaoHist.SetActive(false);
             qtdeHist = 0; ;
             buttonPause.SetActive(true);
+			pular.SetActive (true);
+			slide.SetActive (true);
             resumeGame();
         }
     }
