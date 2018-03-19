@@ -8,7 +8,12 @@ public class pauseController : MonoBehaviour {
     public GameObject panelPause;
     public GameObject panelCuriosidades;
     public GameObject panelHistoria;
+    public GameObject panelHistoria2;
+    public GameObject panelHistoria3;
+    public GameObject botaoHist;
+    public UnityEngine.UI.Text texto;
     public GameObject buttonPause;
+    private int qtdeHist = 0;
     private float segundos;
     // Use this for initialization
     void Start () {
@@ -82,8 +87,26 @@ public class pauseController : MonoBehaviour {
     }
     public void fecharHistoria()
     {
-        panelHistoria.SetActive(false);
-        buttonPause.SetActive(true);
-        resumeGame();
+        if(qtdeHist == 0)
+        {
+            panelHistoria.SetActive(false);
+            panelHistoria2.SetActive(true);
+            qtdeHist++;
+        }
+        else if(qtdeHist == 1)
+        {
+            panelHistoria2.SetActive(false);
+            panelHistoria3.SetActive(true);
+            texto.text = "Iniciar";
+            qtdeHist++;
+        }
+        else
+        {
+            panelHistoria3.SetActive(false);
+            botaoHist.SetActive(false);
+            qtdeHist = 0; ;
+            buttonPause.SetActive(true);
+            resumeGame();
+        }
     }
 }
