@@ -27,10 +27,11 @@ public class pauseController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (playerController.contCoin >= 100)
+        if (playerController.contCoin >= 5)
         {
             PlayerPrefs.SetInt("moedas", playerController.contCoin);
             panelCuriosidades.SetActive(true);
+            PlayerPrefs.SetInt("continueFase", 2);
             Time.timeScale = 0;
         }
 	}

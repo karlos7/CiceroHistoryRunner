@@ -10,9 +10,21 @@ public class ScriptMenuPrincipal : MonoBehaviour {
 		
 	}
 	public void iniciarTutorial(){
-		SceneManager.LoadScene("HistoriaUm");
-	}
-	public void sair(){
+        PlayerPrefs.SetInt("continueFase", 1);
+        SceneManager.LoadScene("HistoriaUm");
+    }
+    public void continueFase()
+    {
+        if (PlayerPrefs.GetInt("continueFase") == 1)
+        {
+            SceneManager.LoadScene("FaseUm");
+        }
+        else if (PlayerPrefs.GetInt("continueFase") == 2)
+        {
+            SceneManager.LoadScene("HistoriaDois");
+        }
+    }
+    public void sair(){
 		Application.Quit();
 	}
 	// Update is called once per frame
