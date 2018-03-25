@@ -122,11 +122,6 @@ public class playerController : MonoBehaviour {
 			if (pontuacao > PlayerPrefs.GetInt ("recorde")) {
 				PlayerPrefs.SetInt ("recorde", pontuacao);
 			}
-            MoveOffset.velociade = 0.03f;
-            MoveOffset.velociadeChao = 2.5f;
-            moveObjeto.velocidade = -2f;
-            spawnController.rateSpawn = 5;
-            spawnController.rateSpawn2 = 8;
             SceneManager.LoadScene("gameOver");
         }
         else
