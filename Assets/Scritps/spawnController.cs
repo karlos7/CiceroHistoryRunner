@@ -29,8 +29,6 @@ public class spawnController : MonoBehaviour {
 	private GameObject tempPrefab5;
 	public GameObject moedaPrefab6;
 	private GameObject tempPrefab6;
-    public GameObject Player;
-    private GameObject PlayerJogo;
     private float x;
 
 
@@ -38,8 +36,6 @@ public class spawnController : MonoBehaviour {
     // Use this for initialization
     void Start () {
 		currentTime = 0;
-        PlayerJogo = Instantiate(Player) as GameObject;
-        PlayerJogo.transform.position = new Vector3(-42.34f, 8.24f, -3f);
     }
     public void Rate()
     {

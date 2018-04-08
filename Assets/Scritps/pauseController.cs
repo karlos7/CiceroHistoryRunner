@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class pauseController : MonoBehaviour {
@@ -17,6 +18,7 @@ public class pauseController : MonoBehaviour {
     public GameObject buttonPause;
     private int qtdeHist = 0;
     private float segundos;
+    public static pauseController Instance;
     // Use this for initialization
     void Start () {
         Time.timeScale = 0;
@@ -24,9 +26,20 @@ public class pauseController : MonoBehaviour {
 		pular.SetActive (false);
 		slide.SetActive (false);
     }
-	
-	// Update is called once per frame
-	void Update () {
+    void Awake()
+    {
+        Instance = this;
+    }
+    public void pullar()
+    {
+        playerController.Instance.pular();
+    }
+    public void slidee()
+    {
+        playerController.Instance.slde();
+    }
+    // Update is called once per frame
+    void Update () {
         if (playerController.contCoin >= 5)
         {
             PlayerPrefs.SetInt("moedas", playerController.contCoin);

@@ -49,17 +49,23 @@ public class playerController : MonoBehaviour {
 	public AudioClip soundAlto;
 	public AudioClip soundAux;
 
+    public static playerController Instance;
     // Use this for initialization
     void Start () {
-		Player = GameObject.Find ("Player") as GameObject;
 		pontuacao = 0;
 		playerController.contCoin = 0;
 		PlayerPrefs.SetInt ("pontuacao", pontuacao);
         Time.timeScale = 0;
+        Player = GameObject.Find("Player") as GameObject;
+        txtPontos = GameObject.Find("TxtPontos").GetComponent<UnityEngine.UI.Text>();
+        txtMoedas = GameObject.Find("moedass").GetComponent<UnityEngine.UI.Text>();
     }
-
-	// Update is called once per frame
-	public void pular(){
+    void Awake()
+    {
+        Instance = this;
+    }
+    // Update is called once per frame
+    public void pular(){
 		if(chao){
 			playerRigidbody.AddForce (new Vector2(0,forceJump));
 			audio.PlayOneShot (soundJump);

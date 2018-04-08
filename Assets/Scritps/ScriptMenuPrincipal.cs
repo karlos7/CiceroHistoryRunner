@@ -11,7 +11,7 @@ public class ScriptMenuPrincipal : MonoBehaviour {
 	}
 	public void iniciarTutorial(){
         PlayerPrefs.SetInt("continueFase", 1);
-        SceneManager.LoadScene("HistoriaUm");
+        SceneManager.LoadScene("SelecionarPersonagem");
     }
     public void continueFase()
     {
