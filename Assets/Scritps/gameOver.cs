@@ -10,7 +10,7 @@ public class gameOver : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		pontos.text = PlayerPrefs.GetInt ("pontuacao").ToString ();
-		recorde.text = PlayerPrefs.GetInt ("recorde").ToString ();//sdfgjh
+		recorde.text = PlayerPrefs.GetInt ("recorde").ToString ();
 		moedas.text = PlayerPrefs.GetInt ("moedas").ToString ();
 	}
 	

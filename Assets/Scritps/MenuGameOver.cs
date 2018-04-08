@@ -26,6 +26,7 @@ public class MenuGameOver : MonoBehaviour {
 
 	public void voltarJogo(){
 		SceneManager.LoadScene("FaseUm");
-	}
+        playerController.contCoin=0;
+    }
 
 }
