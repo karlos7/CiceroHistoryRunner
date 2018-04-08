@@ -13,12 +13,12 @@ public class spawnPlayer : MonoBehaviour {
         if (PlayerPrefs.GetInt("personagem") == 1)
         {
             PlayerJogo = Instantiate(Player) as GameObject;
-            PlayerJogo.transform.position = new Vector3(-42.34f, 8.24f, -3f);
+            PlayerJogo.transform.position = new Vector3(-42.34f, 9f, -3f);
         }
         else if (PlayerPrefs.GetInt("personagem") == 2)
         {
             PlayerJogo = Instantiate(Player2) as GameObject;
-            PlayerJogo.transform.position = new Vector3(-42.34f, 8.24f, -3f);
+            PlayerJogo.transform.position = new Vector3(-42.34f, 9f, -3f);
         }
     }
 	

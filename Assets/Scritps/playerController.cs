@@ -98,7 +98,7 @@ public class playerController : MonoBehaviour {
 			slde ();
 		} 
 
-		chao = Physics2D.OverlapCircle(groundCheck.position, 0.2f, whatIsChao);
+		chao = Physics2D.OverlapCircle(groundCheck.position, 0.3f, whatIsChao);
 		if (slide) {
 			timeTemp += Time.deltaTime;
 			if(timeTemp >= slideTemp){
