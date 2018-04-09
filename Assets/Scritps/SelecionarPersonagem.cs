@@ -38,7 +38,7 @@ public class SelecionarPersonagem : MonoBehaviour {
                 personagem = 3;
             }else{
                 //Feminino cor escura;
-                personagem = 2;
+                personagem = 4;
             }
         }
 	}
@@ -75,5 +75,9 @@ public class SelecionarPersonagem : MonoBehaviour {
     {
         PlayerPrefs.SetInt("personagem", personagem);
         SceneManager.LoadScene("HistoriaUm");
+    }
+    public void voltar()
+    {
+        SceneManager.LoadScene("telaPrincipal");
     }
 }

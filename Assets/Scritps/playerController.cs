@@ -14,10 +14,10 @@ public class playerController : MonoBehaviour {
 	//Verifica o chão
 	public Transform groundCheck;
 	public bool chao;
-	public LayerMask whatIsChao;
+    private LayerMask whatIsChao;
 
-	//Moedas
-	public Transform moedaCheck;
+    //Moedas
+    public Transform moedaCheck;
 	public bool moeda;
 	public LayerMask whatIsMoeda;
 	public static int contCoin = 0;
@@ -37,25 +37,31 @@ public class playerController : MonoBehaviour {
     // Pontuação
 
     public static int pontuacao;
-	public UnityEngine.UI.Text txtPontos;
-	public UnityEngine.UI.Text txtMoedas;
 	public GameObject Player;
 	public float timePont = 0;
+    public UnityEngine.UI.Text txtPontos;
+    public UnityEngine.UI.Text txtMoedas;
 
-	public AudioSource audio;
+    public AudioSource audio;
 	public AudioClip soundJump;
 	public AudioClip soundCoin;
 	public AudioClip soundSlide;
 	public AudioClip soundAlto;
 	public AudioClip soundAux;
 
+    public bool pause;
+
     public static playerController Instance;
     // Use this for initialization
     void Start () {
-		pontuacao = 0;
+        whatIsChao = FaseUmElementos.Instance.whatIsChao;
+        txtPontos = FaseUmElementos.Instance.txtPontos;
+        txtMoedas = FaseUmElementos.Instance.txtMoedas;
+        pause = FaseUmElementos.Instance.pause;
+        pontuacao = 0;
 		playerController.contCoin = 0;
 		PlayerPrefs.SetInt ("pontuacao", pontuacao);
-        Time.timeScale = 0;
+        if (pause == true) { Time.timeScale = 0; } else { Time.timeScale = 1; }
         Player = GameObject.Find("Player") as GameObject;
         txtPontos = GameObject.Find("TxtPontos").GetComponent<UnityEngine.UI.Text>();
         txtMoedas = GameObject.Find("moedass").GetComponent<UnityEngine.UI.Text>();
