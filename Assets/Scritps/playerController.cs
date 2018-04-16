@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class playerController : MonoBehaviour {
 
@@ -43,11 +44,11 @@ public class playerController : MonoBehaviour {
     public UnityEngine.UI.Text txtMoedas;
 
     public AudioSource audio;
-	public AudioClip soundJump;
-	public AudioClip soundCoin;
+    public AudioSource audioMusic;
+    public AudioClip soundJump;
+    public AudioClip somFase;
+    public AudioClip soundCoin;
 	public AudioClip soundSlide;
-	public AudioClip soundAlto;
-	public AudioClip soundAux;
 
     public bool pause;
 
@@ -58,13 +59,32 @@ public class playerController : MonoBehaviour {
         txtPontos = FaseUmElementos.Instance.txtPontos;
         txtMoedas = FaseUmElementos.Instance.txtMoedas;
         pause = FaseUmElementos.Instance.pause;
+        audioMusic = FaseUmElementos.Instance.audioMusic;
+        audio = SonsMusicas.Instance.audio;
+        somFase = FaseUmElementos.Instance.somFase;
         pontuacao = 0;
-		playerController.contCoin = 0;
+        if (PlayerPrefs.GetInt("music") == 1)
+        {
+            playMusica();
+            SonsMusicas.Instance.cont = 1;
+            PlayerPrefs.SetInt("music", 2);
+        }
+        else
+        {
+
+        }
+        playerController.contCoin = 0;
 		PlayerPrefs.SetInt ("pontuacao", pontuacao);
         if (pause == true) { Time.timeScale = 0; } else { Time.timeScale = 1; }
         Player = GameObject.Find("Player") as GameObject;
         txtPontos = GameObject.Find("TxtPontos").GetComponent<UnityEngine.UI.Text>();
         txtMoedas = GameObject.Find("moedass").GetComponent<UnityEngine.UI.Text>();
+    }
+    public void playMusica()
+    {
+        audioMusic.clip = somFase;
+        audioMusic.loop = true;
+        audioMusic.Play();
     }
     void Awake()
     {
@@ -75,7 +95,6 @@ public class playerController : MonoBehaviour {
 		if(chao){
 			playerRigidbody.AddForce (new Vector2(0,forceJump));
 			audio.PlayOneShot (soundJump);
-			audio.volume = 1f;
 			if (slide) {
 				colisor.position = new Vector3 (colisor.position.x, colisor.position.y + 0.3f, colisor.position.z);
 				slide = false;
@@ -85,16 +104,13 @@ public class playerController : MonoBehaviour {
 	public void slde(){
 		if(chao && !slide) {
 			audio.PlayOneShot (soundSlide);
-			audio.volume = 1f;
 			colisor.position = new Vector3 (colisor.position.x, colisor.position.y - 0.3f, colisor.position.z);
 			slide = true;
 			timeTemp = 0;
 		}
 	}
 	void Update () {
-
-
-		txtPontos.text = pontuacao.ToString ();
+        txtPontos.text = pontuacao.ToString ();
 		txtMoedas.text = playerController.contCoin.ToString ();
 		//Se o pulo for apertado e estiver no chão
 		if(Input.GetButtonDown("Jump") && chao){
@@ -139,7 +155,6 @@ public class playerController : MonoBehaviour {
         else
 		if (collider.gameObject.tag == "moeda") {
 			audio.PlayOneShot (soundCoin);
-			audio.volume = 0.5f;
 			playerController.contCoin++;
 		}
         }
