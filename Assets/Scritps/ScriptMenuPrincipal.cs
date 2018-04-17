@@ -7,9 +7,6 @@ public class ScriptMenuPrincipal : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        PlayerPrefs.SetInt("music", 1);
-        PlayerPrefs.SetInt("audio", 1);
-        SonsMusicas.Instance.musicOn();
     }
 	public void iniciarTutorial(){
         PlayerPrefs.SetInt("continueFase", 1);

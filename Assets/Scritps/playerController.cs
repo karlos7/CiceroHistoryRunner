@@ -63,28 +63,12 @@ public class playerController : MonoBehaviour {
         audio = SonsMusicas.Instance.audio;
         somFase = FaseUmElementos.Instance.somFase;
         pontuacao = 0;
-        if (PlayerPrefs.GetInt("music") == 1)
-        {
-            playMusica();
-            SonsMusicas.Instance.cont = 1;
-            PlayerPrefs.SetInt("music", 2);
-        }
-        else
-        {
-
-        }
         playerController.contCoin = 0;
 		PlayerPrefs.SetInt ("pontuacao", pontuacao);
         if (pause == true) { Time.timeScale = 0; } else { Time.timeScale = 1; }
         Player = GameObject.Find("Player") as GameObject;
         txtPontos = GameObject.Find("TxtPontos").GetComponent<UnityEngine.UI.Text>();
         txtMoedas = GameObject.Find("moedass").GetComponent<UnityEngine.UI.Text>();
-    }
-    public void playMusica()
-    {
-        audioMusic.clip = somFase;
-        audioMusic.loop = true;
-        audioMusic.Play();
     }
     void Awake()
     {

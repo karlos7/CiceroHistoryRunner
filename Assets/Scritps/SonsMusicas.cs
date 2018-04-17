@@ -21,13 +21,24 @@ public class SonsMusicas : MonoBehaviour {
     {
         audioMusic = FaseUmElementos.Instance.audioMusic;
         somFase = FaseUmElementos.Instance.somFase;
-        if (PlayerPrefs.GetInt("music") == 2)
+        if(PlayerPrefs.GetInt("music") == 2)
         {
             buttonMusic.sprite = MusicOnImg;
+            playMusica();
         }
-        else if(PlayerPrefs.GetInt("audio") == 1)
+        else
         {
             buttonMusic.sprite = MusicOffImg;
+        }
+        if (PlayerPrefs.GetInt("audio") != 2)
+        {
+            buttonAudio.sprite = AudioOffImg;
+            audio.volume = 0.0f;
+        }
+        else if (PlayerPrefs.GetInt("audio") == 2)
+        {
+            buttonAudio.sprite = AudioOnImg;
+            audio.volume = 0.7f;
         }
     }
 
@@ -46,37 +57,36 @@ public class SonsMusicas : MonoBehaviour {
         audioMusic.loop = true;
         audioMusic.Play();
     }
-    public void musicOn()
+    public void pauseMusic()
     {
-        if (cont==0)
+        audioMusic.Pause();
+    }
+    public void musicOn2()
+    {
+        if (PlayerPrefs.GetInt("music") != 2)
         {
             playMusica();
-            cont = 1;
+            buttonMusic.sprite = MusicOnImg;
+            PlayerPrefs.SetInt("music", 2);
         }
-        else if (PlayerPrefs.GetInt("music") != 1 && cont != 0)
+        else if(PlayerPrefs.GetInt("music") == 2)
         {
             PlayerPrefs.SetInt("music", 1);
-            audioMusic.Play();
-            buttonMusic.sprite = MusicOnImg;
-        }
-        else
-        {
-            PlayerPrefs.SetInt("music", 2);
-            audioMusic.Pause();
+            pauseMusic();
             buttonMusic.sprite = MusicOffImg;
         }
     }
     public void audioOn()
     {
-        if (PlayerPrefs.GetInt("audio") != 1)
+        if (PlayerPrefs.GetInt("audio") != 2)
         {
-            PlayerPrefs.SetInt("audio", 1);
+            PlayerPrefs.SetInt("audio", 2);
             audio.volume = 0.7f;
             buttonAudio.sprite = AudioOnImg;
         }
-        else
+        else if (PlayerPrefs.GetInt("audio") == 2)
         {
-            PlayerPrefs.SetInt("audio", 2);
+            PlayerPrefs.SetInt("audio", 1);
             audio.volume = 0.0f;
             buttonAudio.sprite = AudioOffImg;
         }
