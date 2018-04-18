@@ -16,7 +16,7 @@ public class Chapeu : MonoBehaviour {
     void Update()
     {
         currentTime += Time.deltaTime;
-        if (currentTime >= 3)
+        if (currentTime >= 5)
         {
             Destroy(chapeu);
         }
