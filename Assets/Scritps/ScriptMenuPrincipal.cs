@@ -22,6 +22,10 @@ public class ScriptMenuPrincipal : MonoBehaviour {
         {
             SceneManager.LoadScene("HistoriaDois");
         }
+        else
+        {
+            SceneManager.LoadScene("SelecionarPersonagem");
+        }
     }
     public void sair(){
 		Application.Quit();

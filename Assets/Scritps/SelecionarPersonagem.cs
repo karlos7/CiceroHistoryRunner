@@ -5,71 +5,115 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SelecionarPersonagem : MonoBehaviour {
-    int sexo = 1;
-    int cor = 1;
     int personagem;
-    public GameObject sel1;
-    public GameObject sel2;
-    public GameObject sel3;
-    public GameObject sel4;
-    public Image imagem;
-    public Sprite img1;
-    public Sprite img2;
-    public Sprite img3;
-    public Sprite img4;
+    public Button sel1;
+    public Button sel2;
+    public Button sel3;
+    public Button sel4;
+    public Color c1;
+    public Color c2;
     // Use this for initialization
     void Start () {
-        
+        personagem = 1;
+        ColorBlock cb = sel1.colors;
+        cb.normalColor = c1;
+        cb.pressedColor = c1;
+        cb.highlightedColor = c1;
+        sel1.colors = cb;
+        sel1.image.color = new Color(113f, 100f, 72f, 245f);
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (sexo == 1){
-            if (cor == 1){
-                //Masculino cor clara;
-                personagem = 1;
-            }else{
-                //Masculino cor escura;
-                personagem = 2;
-            }
-        }else{
-            if (cor == 1){
-                //Feminino cor clara;
-                personagem = 3;
-            }else{
-                //Feminino cor escura;
-                personagem = 4;
-            }
-        }
-	}
 
-    public void masculino()
+	}
+    public void p1()
     {
-        sexo = 1;
-        if (cor == 1) { imagem.sprite = img1; } else { imagem.sprite = img2; }
-        sel1.SetActive(true);
-        sel3.SetActive(false);
+        personagem = 1;
+        pp2();
+        pp3();
+        pp4();
+        ColorBlock cb = sel1.colors;
+        cb.normalColor = c1;
+        cb.pressedColor = c1;
+        cb.highlightedColor = c1;
+        sel1.colors = cb;
+        sel1.image.color = new Color(113f, 100f, 72f, 245f);
     }
-    public void feminino()
+    public void p2()
     {
-        if (cor == 1) { imagem.sprite = img3; } else { imagem.sprite = img4; }
-        sexo = 2;
-        sel1.SetActive(false);
-        sel3.SetActive(true);
+        personagem = 2;
+        pp1();
+        pp3();
+        pp4();
+        ColorBlock cb = sel2.colors;
+        cb.normalColor = c1;
+        cb.pressedColor = c1;
+        cb.highlightedColor = c1;
+        sel2.colors = cb;
+        sel2.image.color = new Color(113f, 100f, 72f, 245f);
     }
-    public void cor1()
+    public void p3()
     {
-        if (sexo == 1) { imagem.sprite = img1; } else { imagem.sprite = img3; }
-        cor = 1;
-        sel2.SetActive(true);
-        sel4.SetActive(false);
+        pp1();
+        pp2();
+        pp4();
+        personagem = 3;
+        ColorBlock cb = sel3.colors;
+        cb.normalColor = c1;
+        cb.pressedColor = c1;
+        cb.highlightedColor = c1;
+        sel3.colors = cb;
+        sel3.image.color = new Color(113f, 100f, 72f, 245f);
     }
-    public void cor2()
+    public void p4()
     {
-        if (sexo == 1) { imagem.sprite = img2; } else { imagem.sprite = img4; }
-        cor = 2;
-        sel2.SetActive(false);
-        sel4.SetActive(true);
+        personagem = 4;
+        pp1();
+        pp2();
+        pp3();
+        ColorBlock cb = sel4.colors;
+        cb.normalColor = c1;
+        cb.pressedColor = c1;
+        cb.highlightedColor = c1;
+        sel4.colors = cb;
+        sel4.image.color = new Color(113f, 100f, 72f, 245f);
+    }
+    public void pp1()
+    {
+        ColorBlock cb = sel1.colors;
+        cb.normalColor = c2;
+        cb.pressedColor = c2;
+        cb.highlightedColor = c2;
+        sel1.colors = cb;
+        sel1.image.color = new Color(113f, 100f, 72f, 120f);
+    }
+    public void pp2()
+    {
+        ColorBlock cb = sel2.colors;
+        cb.normalColor = c2;
+        cb.pressedColor = c2;
+        cb.highlightedColor = c2;
+        sel2.colors = cb;
+        sel2.image.color = new Color(113f, 100f, 72f, 120f);
+    }
+    public void pp3()
+    {
+        ColorBlock cb = sel3.colors;
+        cb.normalColor = c2;
+        cb.pressedColor = c2;
+        cb.highlightedColor = c2;
+        sel3.colors = cb;
+        sel3.image.color = new Color(113f, 100f, 72f, 120f);
+    }
+    public void pp4()
+    {
+        ColorBlock cb = sel4.colors;
+        cb.normalColor = c2;
+        cb.pressedColor = c2;
+        cb.highlightedColor = c2;
+        sel4.colors = cb;
+        sel4.image.color = new Color(113f, 100f, 72f, 120f);
     }
     public void continuar()
     {

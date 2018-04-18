@@ -10,7 +10,11 @@ public class playerTutorial : MonoBehaviour {
 	public void pularTurorial(){
 		SceneManager.LoadScene("FaseUm");
 	}
-	void Update () {
+    public void voltar()
+    {
+        SceneManager.LoadScene("SelecionarPersonagem");
+    }
+    void Update () {
 
 	}
     void Awake()
