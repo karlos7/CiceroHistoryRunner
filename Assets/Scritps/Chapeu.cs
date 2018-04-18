@@ -22,7 +22,7 @@ public class Chapeu : MonoBehaviour {
         }
         else
         {
-            x +=1f;
+            x +=2f;
             transform.position = new Vector3(x, transform.position.y, 50f);
         }
     }
