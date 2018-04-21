@@ -13,7 +13,6 @@ public class Vitoria : MonoBehaviour {
     {
         fase = PlayerPrefs.GetInt("continueFase");
         fase++;
-        Debug.Log(fase);
     }
 
     public void sair()
