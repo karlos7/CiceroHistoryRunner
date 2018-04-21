@@ -118,7 +118,7 @@ public class SelecionarPersonagem : MonoBehaviour {
     public void continuar()
     {
         PlayerPrefs.SetInt("personagem", personagem);
-        SceneManager.LoadScene("HistoriaUm");
+        SceneManager.LoadScene("tutorial");
     }
     public void voltar()
     {

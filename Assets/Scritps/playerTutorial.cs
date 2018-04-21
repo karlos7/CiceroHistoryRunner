@@ -8,7 +8,7 @@ public class playerTutorial : MonoBehaviour {
     void Start () {
     }
 	public void pularTurorial(){
-		SceneManager.LoadScene("FaseUm");
+		SceneManager.LoadScene("HistoriaUm");
 	}
     public void voltar()
     {

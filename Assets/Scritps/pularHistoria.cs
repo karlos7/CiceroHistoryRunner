@@ -27,7 +27,7 @@ public class pularHistoria : MonoBehaviour {
         else if (pularhist == 1)
         {
             pularhist += 1; ;
-            SceneManager.LoadScene("tutorial");
+            SceneManager.LoadScene("FaseUm");
         }
     }
 }
