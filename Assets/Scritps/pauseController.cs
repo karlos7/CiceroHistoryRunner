@@ -18,7 +18,6 @@ public class pauseController : MonoBehaviour {
     public GameObject buttonPause;
     private int qtdeHist = 0;
     private float segundos;
-    private int fase;
     public static pauseController Instance;
     // Use this for initialization
     void Start () {
@@ -41,12 +40,10 @@ public class pauseController : MonoBehaviour {
     }
     // Update is called once per frame
     void Update () {
-        if (playerController.contCoin >= 100)
+        if (playerController.contCoin >= 5)
         {
             PlayerPrefs.SetInt("moedas", playerController.contCoin);
             panelCuriosidades.SetActive(true);
-            fase = PlayerPrefs.GetInt("continueFase")+1;
-            PlayerPrefs.SetInt("continueFase", fase);
             Time.timeScale = 0;
         }
 	}
