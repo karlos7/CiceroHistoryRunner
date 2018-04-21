@@ -23,10 +23,12 @@ public class ScriptMenuPrincipal : MonoBehaviour {
     {
         if (fase == 1)
         {
+            PlayerPrefs.SetInt("continueFase", 1);
             SceneManager.LoadScene("FaseUm");
         }
         else if (fase == 2)
         {
+            PlayerPrefs.SetInt("continueFase", 2);
             SceneManager.LoadScene("FaseDois");
         }
         else
