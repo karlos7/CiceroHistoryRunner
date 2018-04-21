@@ -62,7 +62,7 @@ public class spawnController : MonoBehaviour {
             if (posicao >= 0 && posicao < 30) {
                 y = 8.32f;
                 tempPrefab = Instantiate(barreiraPrefab1) as GameObject;
-                tempPrefab.transform.position = new Vector3(transform.position.x, y, tempPrefab.transform.position.z);
+                tempPrefab.transform.position = new Vector3(transform.position.x, tempPrefab.transform.position.y, tempPrefab.transform.position.z);
             } else if (posicao >= 30 && posicao < 60) {
                 y = 9.3f;
                 tempPrefab15 = Instantiate(barreiraPrefab2) as GameObject;

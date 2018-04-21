@@ -20,7 +20,7 @@ public class ScriptMenuPrincipal : MonoBehaviour {
         }
         else if (PlayerPrefs.GetInt("continueFase") == 2)
         {
-            SceneManager.LoadScene("HistoriaDois");
+            SceneManager.LoadScene("FaseDois");
         }
         else
         {
