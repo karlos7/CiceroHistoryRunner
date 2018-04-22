@@ -4,16 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Vitoria : MonoBehaviour {
-    private int fase;
     // Use this for initialization
     void Start () {
-        fases();
 	}
-    public void fases()
-    {
-        fase = PlayerPrefs.GetInt("continueFase");
-        fase++;
-    }
 
     public void sair()
     {
@@ -28,15 +21,20 @@ public class Vitoria : MonoBehaviour {
 
     public void voltarJogo()
     {
-        if (fase == 1)
-        {
-            PlayerPrefs.SetInt("continueFase", 1);
-            SceneManager.LoadScene("FaseUm");
-        }
-        else if (fase == 2)
+        if (PlayerPrefs.GetInt("continueFase") == 1)
         {
             PlayerPrefs.SetInt("continueFase", 2);
             SceneManager.LoadScene("FaseDois");
+        }
+        else if (PlayerPrefs.GetInt("continueFase") == 2)
+        {
+            PlayerPrefs.SetInt("continueFase", 3);
+            SceneManager.LoadScene("FaseTres");
+        }
+        else if (PlayerPrefs.GetInt("continueFase") == 3)
+        {
+            PlayerPrefs.SetInt("continueFase", 1);
+            SceneManager.LoadScene("MenuPrincipal");
         }
         else
         {

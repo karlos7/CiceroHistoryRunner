@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveOffset : MonoBehaviour {
 
 	private Material materialAtual;
-    public static float velociade = 0.15f;
+    public float velociade;
     public static float velociadeChao = 3.2f;
 	private float offset = 1f;
 
