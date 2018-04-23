@@ -23,6 +23,10 @@ public class ScriptMenuPrincipal : MonoBehaviour {
         }
         else if (PlayerPrefs.GetInt("continueFase") == 3)
         {
+            SceneManager.LoadScene("FaseQuatro");
+        }
+        else if (PlayerPrefs.GetInt("continueFase") == 4)
+        {
             SceneManager.LoadScene("FaseTres");
         }
         else

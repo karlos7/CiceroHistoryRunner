@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Vitoria : MonoBehaviour {
     // Use this for initialization
     void Start () {
-	}
+    }
 
     public void sair()
     {
@@ -15,6 +15,18 @@ public class Vitoria : MonoBehaviour {
 
     public void menuPrincipal()
     {
+        if (PlayerPrefs.GetInt("continueFase") == 1)
+        {
+            PlayerPrefs.SetInt("continueFase", 2);
+        }
+        else if (PlayerPrefs.GetInt("continueFase") == 2)
+        {
+            PlayerPrefs.SetInt("continueFase", 3);
+        }
+        else if (PlayerPrefs.GetInt("continueFase") == 3)
+        {
+            PlayerPrefs.SetInt("continueFase", 4);
+        }
         Time.timeScale = 1;
         SceneManager.LoadScene("telaPrincipal");
     }
@@ -29,12 +41,17 @@ public class Vitoria : MonoBehaviour {
         else if (PlayerPrefs.GetInt("continueFase") == 2)
         {
             PlayerPrefs.SetInt("continueFase", 3);
-            SceneManager.LoadScene("FaseTres");
+            SceneManager.LoadScene("FaseQuatro");
         }
         else if (PlayerPrefs.GetInt("continueFase") == 3)
         {
+            PlayerPrefs.SetInt("continueFase", 4);
+            SceneManager.LoadScene("FaseTres");
+        }
+        else if (PlayerPrefs.GetInt("continueFase") == 4)
+        {
             PlayerPrefs.SetInt("continueFase", 1);
-            SceneManager.LoadScene("MenuPrincipal");
+            SceneManager.LoadScene("telaPrincipal");
         }
         else
         {
