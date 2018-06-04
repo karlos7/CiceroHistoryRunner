@@ -29,6 +29,10 @@ public class ScriptMenuPrincipal : MonoBehaviour {
         {
             SceneManager.LoadScene("FaseTres");
         }
+        else if (PlayerPrefs.GetInt("continueFase") == 5)
+        {
+            SceneManager.LoadScene("FaseCinco");
+        }
         else
         {
             SceneManager.LoadScene("SelecionarPersonagem");

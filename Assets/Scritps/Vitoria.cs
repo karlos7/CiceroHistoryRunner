@@ -27,6 +27,10 @@ public class Vitoria : MonoBehaviour {
         {
             PlayerPrefs.SetInt("continueFase", 4);
         }
+        else if (PlayerPrefs.GetInt("continueFase") == 4)
+        {
+            PlayerPrefs.SetInt("continueFase", 5);
+        }
         Time.timeScale = 1;
         SceneManager.LoadScene("telaPrincipal");
     }
@@ -49,6 +53,10 @@ public class Vitoria : MonoBehaviour {
             SceneManager.LoadScene("FaseTres");
         }
         else if (PlayerPrefs.GetInt("continueFase") == 4)
+        {
+            PlayerPrefs.SetInt("continueFase", 5);
+            SceneManager.LoadScene("FaseCinco");
+        }else if (PlayerPrefs.GetInt("continueFase") == 5)
         {
             PlayerPrefs.SetInt("continueFase", 1);
             SceneManager.LoadScene("telaPrincipal");

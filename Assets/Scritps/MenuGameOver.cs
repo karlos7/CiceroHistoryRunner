@@ -41,6 +41,10 @@ public class MenuGameOver : MonoBehaviour {
         {
             SceneManager.LoadScene("FaseTres");
         }
+        else if (PlayerPrefs.GetInt("continueFase") == 5)
+        {
+            SceneManager.LoadScene("FaseCinco");
+        }
         else
         {
             SceneManager.LoadScene("SelecionarPersonagem");
